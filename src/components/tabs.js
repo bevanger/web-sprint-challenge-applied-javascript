@@ -1,3 +1,5 @@
+import { javascript } from "webpack";
+
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -13,6 +15,26 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
+
+  const topicsDiv = document.createElement('div');
+  const tab1Div = document.createElement('div');
+  const tab2Div = document.createElement('div');
+  const tab3Div = document.createElement('div');
+
+  topicsDiv.appendChild(tab1Div);
+  topicsDiv.appendChild(tab2Div);
+  topicsDiv.appendChild(tab3Div);
+
+  topicsDiv.classList.add('topics');
+  tab1Div.classList.add('tab');
+  tab2Div.classList.add('tab');
+  tab3Div.classList.add('tab');
+
+  tab1Div.textContent = 'javascript';
+  tab2Div.textContent = 'bootstrap';
+  tab3Div.textContent = 'technology';
+
+  return topicsDiv;
 }
 
 const tabsAppender = (selector) => {
